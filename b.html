@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="index.html">index</a>
+</body>
+<script>
+function PascalTriangle(numRows) {
+  var triangle = [];
+  for (var i = 0; i < numRows; i++) {
+    triangle[i] = [];
+    for (var j = 0; j < i + 1; j++) {
+      if (j === 0 || j === i) {
+        triangle[i][j] = 1;
+      } else {
+        triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
+      }
+    }
+  }
+  return triangle;
+}
+ 
+const numRows = 5;
+const triangle =PascalTriangle(numRows);
+ 
+console.log(triangle);
+</script>
+</html>

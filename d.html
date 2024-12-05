@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="index.html">index</a>
+</body>
+<script>
+    function differentStrings(s,t){
+        var diff=[];
+        for (var i = 0; i < Math.max(s.length, t.length); i++){
+            if(s[i]!==t[i]){
+                diff.push(s[i]);
+            }
+        }
+        return diff;
+    }
+
+    var s="abcdee";
+    var t="abcdef";
+    console.log(differentStrings(s,t));
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <a href="index.html">index</a>
+</body>
+<script>
+function findWords(words) {
+ var   rows = ['QWERTYUIOP','ASDFGHJKL', 'ZXCVBNM'];
+  return words.filter(word => {
+    var upperWord = word.toUpperCase();
+    var rowIndex = rows.findIndex( row => row.includes(upperWord[0]));
+    return rowIndex !== -1 && upperWord.split('').every(char => rows[rowIndex].includes(char));
+  });
+}
+var words = ['Hello',"Alaska","Dad","Peace"];
+console.log(findWords(words));
+</script>
+</html>
